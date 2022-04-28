@@ -13,6 +13,7 @@ pipeline {
         sh "mvn clean package"   
       }
     }
+    stage('Build Docker Image') {
       steps {
         container('docker') { 
           sh "docker build -t harishoo7/promo-app:latest ."  
@@ -22,4 +23,4 @@ pipeline {
       }
     }
   }
-
+}
