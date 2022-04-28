@@ -15,7 +15,7 @@ pipeline {
     }
       steps {
         container('docker') { 
-          sh "docker build -t harishoo7/promo-app:latest .  
+          sh "docker build -t harishoo7/promo-app:latest ."  
           sh 'docker login -u harishoo7 -p Deva143i7'
           sh "docker push harishoo7/promo-app:dev"        
         }
